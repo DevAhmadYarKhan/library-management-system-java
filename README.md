@@ -44,5 +44,3 @@ Display all items
 Save and exit (saves to file)
 
 Exit without saving
-
-The system automatically loads your media from file when starting. Any changes made during your session will only be permanently saved if you choose "Save and exit" before quitting.
