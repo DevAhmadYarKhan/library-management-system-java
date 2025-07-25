@@ -44,3 +44,8 @@ Display all items
 Save and exit (saves to file)
 
 Exit without saving
+
+
+📅PROJECT COMPLETED:
+
+25 July 2025
