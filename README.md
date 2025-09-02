@@ -24,7 +24,7 @@ A robust and feature-rich command-line Library Management System built with core
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/DevAhmadYar/library-management-system-java.git
+    git clone https://github.com/DevAhmadYarKhan/library-management-system-java.git
     cd library-management-system-java
     ```
 
