@@ -1,48 +1,75 @@
-LIBRARY MANAGEMENT SYSTEM
+# Java Library Management System
 
-A Java-based system for managing books, DVDs, and games in a library with physical location tracking and file persistence.
+A robust and feature-rich command-line Library Management System built with core Java. This application allows librarians to manage a diverse media collection, including Books, DVDs, and Games, with persistent storage to a local file.
+
+## Features
+
+- **Media Management:** Full CRUD (Create, Read, Update, Delete) operations for three media types:
+    - **Books:** Store author, publisher, page count, and more.
+    - **DVDs:** Store director, studio, languages, duration, and more.
+    - **Games:** Store developer, platform, game modes, and more.
+- **Advanced Search:** Search the library by unique ID or by title.
+- **Persistent Storage:** Automatically saves the entire library to a text file (`MyMedia`) upon exit. Reloads data automatically on startup if the file exists.
+- **Input Validation & Error Handling:** Comprehensive validation for all user inputs with clear error messages. Custom exceptions for duplicate IDs and missing media.
+- **Detailed Media Information:** Each item stores a rich set of details, including genres and a precise physical location (branch, section, shelf, floor).
+- **Object-Oriented Design:** Clean separation of concerns with dedicated packages for models, services, and exceptions.
+
+## Technologies Used
+
+- **Java SE:** Core language features including Collections Framework, File I/O, and Object-Oriented Programming principles.
+- **Custom Exceptions:** For elegant and specific error handling.
+- **Java.util Collections:** Heavy use of `Map<Integer, Media>`, `Set<String>`, `List<Media>`, etc., for efficient data management.
+
+## Installation & Compilation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/java-library-management.git
+    cd java-library-management
+    ```
+
+2.  **Compile the Java files:**
+    Navigate to the directory containing the `CLI.java` file and run:
+    ```bash
+    javac -d . CLI.java
+    ```
+    This will compile all `.java` files in the project and place the `.class` files in the correct package structure.
+
+3.  **Run the application:**
+    ```bash
+    java CLI
+    ```
+
+## Usage
+
+Upon starting the program, it will attempt to load existing data from the `MyMedia` file. If none is found, it will initialize an empty library.
+
+You are presented with a main menu:
+
+1. Add new media item
+2. Remove media item
+3. Search media
+4. Display all items
+5. Save and exit
+6. Exit without saving
 
 
-FEATURES
+### Adding an Item
+Select option `1` and choose the media type (Book, DVD, Game). The program will guide you through entering all required details, with validation for each field.
 
-Add, remove, and search books, DVDs, and games
+### Removing an Item
+Select option `2` and enter the ID of the item you wish to remove. You are asked to confirm the deletion.
 
-Track physical locations (branch, section, shelf, floor)
+### Searching
+Select option `3` to search by `ID` (returns one item) or by `Title` (returns all matching items).
 
-Automatic data persistence - saves to file on exit, loads on startup
+### Viewing All Items
+Select option `4` to print a formatted list of every item in the library to the console.
 
-Search by ID or title
+### Exiting
+- Option `5`: Saves the current state of the library to the `MyMedia` file and exits.
+- Option `6`: Exits the program without saving any changes made during the session.
 
-Input validation and error handling
+## Data Persistence
 
-
-DATA PERSISTENCE
-
-The system automatically handles file operations:
-
-On startup: Loads all media items from "MyMedia" file
-
-On "Save and exit": Writes all current items back to "MyMedia" file
-
-Data format: Tab-separated values with special handling for collections
-
-File location: Same directory as the application
-
-
-USAGE
-
-Follow the menu prompts to manage your library:
-
-Add new media item
-
-Remove media item
-
-Search media
-
-Display all items
-
-Save and exit (saves to file)
-
-Exit without saving
-
-The system automatically loads your media from file when starting. Any changes made during your session will only be permanently saved if you choose "Save and exit" before quitting.
+The library's state is saved to a plain text file named `MyMedia` (with no file extension). The `MediaIO` class is responsible for the custom serialization and deserialization of the complex object graph into a tab-separated values format. This ensures your library persists between sessions.
