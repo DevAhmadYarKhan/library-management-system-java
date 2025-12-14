@@ -4,7 +4,7 @@ A robust and feature-rich command-line Library Management System built with core
 
 ## ⚠️ Important Note
 
-This is an early university project built during my first year.
+This is an early personal project built during my first year.
 It is kept for learning-history purposes and does not reflect my current coding standards or architectural approach.
 
 See newer projects on my profile for more up-to-date work.
