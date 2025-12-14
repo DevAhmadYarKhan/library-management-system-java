@@ -2,7 +2,7 @@
 
 A robust and feature-rich command-line Library Management System built with core Java. This application allows librarians to manage a diverse media collection, including Books, DVDs, and Games, with persistent storage to a local file.
 
-⚠️ ## Project Context
+## ⚠️ Project Context
 
 This project was developed during my first year as a Computer Science undergraduate.
 It demonstrates foundational Java concepts such as object-oriented programming, collections, and basic persistence.
