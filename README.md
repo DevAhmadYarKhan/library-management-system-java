@@ -2,7 +2,7 @@
 
 A robust and feature-rich command-line Library Management System built with core Java. This application allows librarians to manage a diverse media collection, including Books, DVDs, and Games, with persistent storage to a local file.
 
-# ⚠️ Important Note
+## ⚠️ Important Note
 
 This is an early university project built during my first year.
 It is kept for learning-history purposes and does not reflect my current coding standards or architectural approach.
